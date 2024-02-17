@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bestilling av Kino</title>
+  <script src="resources/static/script.js" defer></script>
+</head>
+<body>
+<h1>Bestilling av Kino Biletter</h1>
+<form id="bookingForm" action="">
+
+  <table style="">
+    
+    <tr>
+      <td>Velg Film:</td>
+      <td>
+        <select id="film" name="film" required>
+          <option value="film1">Velg film her</option>
+          <option value="film2">Film 1</option>
+          <option value="film3">Film 2</option>
+          <option value="film4">Film 3</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Antall </td>
+      <td>
+        <input type="number" id="antall" name="antall" min="1" max="10" value="1" required style="width: 3.5vh; padding: 0.5vh; box-sizing: border-box;">
+      </td>
+    </tr>
+
+    <tr>
+      <td>Fornavn:</td>
+      <td>
+        <input type="text" id="fname" name="fname" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Etternavn:</td>
+      <td>
+        <input type="text" id="etternavn" name="etternavn" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Telefonnr:</td>
+      <td>
+        <input type="tel" id="telefonnr" name="telefonnr" pattern="[0-9]{10}" required>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+      <td>
+        <input type="email" id="email" name="email" required>
+      </td>
+    </tr>
+  </table>
+
+  <input type="button" value="Kjøp Biletter" onclick="handlePurchase()">
+  <h2>Alle biletter</h2>
+  <input type="button" value="Slett alle bilettene" onclick="deleteAllTickets()">
+
+  <div id="ticketList"></div>
+
+</form>
+</body>
+</html>
